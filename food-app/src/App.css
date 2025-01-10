@@ -1,0 +1,140 @@
+body {
+  background-color: rgb(10, 10, 51);
+  min-height: fit-content;
+  max-height: max-content;
+  color: blanchedalmond;
+}
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.holder {
+  border-radius: 15px;
+  border: 2px solid wheat;
+  color: azure;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 50%;
+  max-width: max-content;
+  padding: 2px;
+  height: 10rem;
+  background-color: rgb(5, 0, 19);
+  margin: 10px 8px;
+}
+
+.holder img {
+  margin: auto 25px;
+}
+
+.holder p {
+  font-size: 2.4vh;
+}
+
+.holder button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 2px 30px;
+}
+
+.box {
+  text-align: center;
+}
+
+.rowL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.arrL {
+  border-radius: 15px;
+  border: 2px solid wheat;
+  color: azure;
+  flex-wrap: wrap;
+  min-width: 80%;
+  max-width: max-content;
+  min-height: 200px;
+  max-height: max-content;
+  padding: 5px;
+  background-color: rgb(35, 35, 35);
+  margin: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrL p {
+  font-size: 3vh;
+}
+
+
+.arrL h1 {
+  font-size: 2.5em;
+}
+
+.clr {
+  height: 8px;
+  width: 8px;
+  font-size: 2vh;
+  background: none;
+  border: none;
+  color: aquamarine;
+}
+
+#exampleModal {
+  background-color: black !important;
+  color: rgb(21, 21, 21);
+}
+
+#BdModel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+
+#BdModel input {
+  margin: 8px;
+  border: solid 2px black;
+
+}
+
+#MyI {
+  font-size: medium;
+}
+
+#thank {
+  border-radius: 30px;
+  border: solid 2px rgb(62, 3, 31);
+  margin: 10px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: black;
+  height: fit-content;
+  padding: 10px 30px;
+  min-width: 60%;
+  max-width: fit-content;
+  font-size: 3.5vh;
+  background-color: rgb(255, 175, 3);
+}
