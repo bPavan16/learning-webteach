@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Management System</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            nav {
+                margin: 20px;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 15px;
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+
+            nav a:hover {
+                color: #007BFF;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+
+            .features,
+            .contact {
+                max-width: 1200px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .features h2,
+            .contact h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            .features ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .features li {
+                background: #007BFF;
+                color: #fff;
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .contact form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact label {
+                font-weight: bold;
+            }
+
+            .contact input,
+            .contact textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .contact button {
+                padding: 10px;
+                background-color: #007BFF;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .contact button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Car Management System</h1>
+        </header>
+
+        <nav>
+            <a href="/admin" aria-label="Admin">Admin</a>
+            <a href="/display" aria-label="Display">Display</a>
+        </nav>
+
+        <main class="container">
+            <h1>Welcome to the Car Management System</h1>
+        </main>
+
+        <section class="features">
+            <h2>Features</h2>
+            <ul style="display: flex; justify-content: space-around; padding: 0;">
+            <li style="flex: 1; margin: 10px; text-align: center;">Manage car inventory</li>
+            <li style="flex: 1; margin: 10px; text-align: center;">Track car maintenance</li>
+            <li style="flex: 1; margin: 10px; text-align: center;">Generate reports</li>
+            <li style="flex: 1; margin: 10px; text-align: center;">View car details</li>
+            </ul>
+        </section>
+
+\
+        <footer>
+            <p>&copy; 2023 Car Management System. All rights reserved.</p>
+        </footer>
+    </body>
+
+</html>

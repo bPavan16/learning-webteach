@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display Page</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            main {
+                width: 90vw;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin: 20px 0;
+            }
+
+            #mainContainer {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .good {
+                color: #333;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                padding: 20px;
+                background-color: #ffffff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s, box-shadow 0.2s;
+                border: 1px solid #ddd;
+            }
+
+            .good:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                border-color: #007BFF;
+            }
+
+            .good span {
+                font-size: 14px;
+                color: #555;
+            }
+
+            .good span:first-child {
+                font-weight: bold;
+                font-size: 16px;
+                color: #333;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 20px;
+                border: none;
+                border-radius: 5px;
+                background-color: #007BFF;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <button id="RefreshButton">Refresh Data</button>
+
+        <main>
+            <div id="mainContainer">
+
+            </div>
+        </main>
+
+        <script>
+            const RefreshButton = document.getElementById("RefreshButton");
+
+            RefreshButton.addEventListener('click', () => {
+                console.log("DataRefresh section");
+
+                fetch('/getCars', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                }).then(response => response.json()).then(data => {
+                    const mainContainer = document.getElementById("mainContainer");
+                    mainContainer.innerHTML = ''; // Clear previous data
+
+                    data.forEach(element => {
+                        const newDiv = document.createElement('div');
+                        newDiv.classList.add('good');
+
+                        let ans = `
+                        <span>VId = ${element.vehicle_id}</span>
+                        <span>Vtype = ${element.vehicle_type}</span>
+                        <span>Staff_id = ${element.staff_id}</span>
+                        <span>Staff Name = ${element.staff_name}</span>
+                        <span>Staff Role = ${element.staff_role}</span>
+                        <span>Price = ${element.price}</span>
+                        <span>Available = ${element.availability}</span>
+                    `;
+
+                        newDiv.innerHTML = ans;
+                        mainContainer.appendChild(newDiv);
+                    });
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
