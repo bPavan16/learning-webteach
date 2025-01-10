@@ -1,0 +1,164 @@
+
+/* Define CSS Variables for Colors */
+:root {
+    --primary-color: #b86808;
+    --secondary-color: #864b0f;
+    --background-color: #fffaf0;
+    --text-color: #333;
+    --white-color: #ffffff;
+    --border-color: #ddd;
+    --hover-color:rgb(40, 129, 40);
+    --delete-color: #ff4500;
+    --delete-hover-color: #e60000;
+
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color:rgb(146, 121, 87);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color:#0a1548;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--white-color);
+}
+
+table th, table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+form input, form button {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+    outline: none;
+}
+
+form button {
+    background-color:green;
+    color: var(--white-color);
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+form button:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Buttons for Actions (Delete Button) */
+button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.delete-btn {
+    background-color: var(--delete-color);
+    color: var(--white-color);
+}
+
+button.delete-btn:hover {
+    background-color: var(--delete-hover-color);
+}
+
+/* Table Action Buttons */
+table td button {
+    margin-right: 5px;
+}
+
+
+#add-book-section, #update-book-section {
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 40px;
+    margin-bottom: 20px;
+}

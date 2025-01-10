@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Books Management System</h1>
+    </header>
+<main class="full-div">
+    <section id="book-list-section">
+        <h2>Book Inventory</h2>
+        <table id="book-list">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Published Date</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- SECTION WHERE DATA WILL COME BY DOM MANIPULATION -->
+
+
+
+            </tbody>
+
+        </table>
+    </section>
+</main>
+    <main>
+
+        <section id="add-book-section">
+            <h2>Add a New Book</h2>
+            <form id="add-book-form">
+                <input type="text" id="title" placeholder="Book Title" required>
+                <input type="text" id="author" placeholder="Author Name" required>
+                <input type="date" id="published-date" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+
+        <!-- Update Quantity Form -->
+        <section id="update-book-section">
+            <h2>Update Book Quantity</h2>
+            <form id="update-book-form">
+                <input type="number" id="update-book-id" placeholder="Book ID" required>
+                <input type="number" id="update-quantity" placeholder="New Quantity" required>
+                <button type="submit">Update Quantity</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
